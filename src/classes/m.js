@@ -90,8 +90,8 @@ const El = {
     if(o.poster) main.poster=o.poster;
     if(o.text) main.setAttribute('text', o.text);
     o.preload ? main.preload=o.preload : main.preload='none';
-    main.disableRemotePlayback=o.remote ? false:true;
-    main.loop=o.replay ? true:false;
+    if(o.remote) main.disableRemotePlayback=o.remote;
+    if(o.replay) main.loop=o.replay;
     if(o.autoplay) main.autoplay=o.autoplay;
     if(o.muted) main.muted=o.muted;
     if(o.loop) main.loop=o.loop;
